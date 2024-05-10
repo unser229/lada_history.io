@@ -9,16 +9,17 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-color: #f8f9fa; /* светло-серый цвет */
+            color: #343a40; /* темно-серый цвет */
         }
         header {
-            background-color: #333;
+            background-color: #343a40; /* темно-серый цвет */
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #444;
+            background-color: #495057; /* серый цвет */
             padding: 10px;
             text-align: center;
         }
@@ -27,21 +28,45 @@
             text-decoration: none;
             padding: 10px;
             margin: 0 5px;
+            transition: background-color 0.3s ease;
         }
         nav a:hover {
-            background-color: #555;
+            background-color: #6c757d; /* темно-серый цвет */
         }
         section {
             padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff; /* белый цвет */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         footer {
-            background-color: #333;
+            background-color: #343a40; /* темно-серый цвет */
             color: #fff;
             text-align: center;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .model-card {
+            background-color: #f8f9fa; /* светло-серый цвет */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .model-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -53,7 +78,6 @@
         <a href="#about">О марке</a>
         <a href="#models">Модели</a>
         <a href="#timeline">История</a>
-
     </nav>
     <section id="about">
         <h2>О марке LADA</h2>
@@ -63,54 +87,35 @@
     </section>
     <section id="models">
         <h2>Модели LADA</h2>
-        <p> <p>
-    <div>
-        <div class="CatalogModelMosaic__mosaic-VDF2l">
-            <a class="Link Link_color_black CatalogModelMosaicCard-MyMKu" href="https://auto.ru/catalog/cars/vaz/granta/" target="_self">
-                <div class="LazyImage CatalogModelMosaicCard__imageWrapper-yiSsM CatalogModelMosaicCard__imageWrapper_desktop-gF6iw LazyImage_theme_light LazyImage_loaded LazyImage_visible">
-                    <img class="LazyImage__image" src="//avatars.mds.yandex.net/get-verba/1030388/2a000001609d713fe4380ce1d36fac8ab0eb/cattouch">
-                </div>
-                <div class="CatalogModelMosaicCard__description-q3sbX">
-                    <span class="CatalogModelMosaicCard__text-RT9F1">Granta</span>
-                    <span class="CatalogModelMosaicCard__separator-gXbCq"></span>
-                    <span class="CatalogModelMosaicCard__count-ympOu">1802</span>
-                </div>
-            </a>
-            <a class="Link Link_color_black CatalogModelMosaicCard-MyMKu" href="https://auto.ru/catalog/cars/vaz/vesta/" target="_self">
-                <div class="LazyImage CatalogModelMosaicCard__imageWrapper-yiSsM CatalogModelMosaicCard__imageWrapper_desktop-gF6iw LazyImage_theme_light LazyImage_loaded LazyImage_visible">
-                    <img class="LazyImage__image" src="//avatars.mds.yandex.net/get-verba/3587101/2a00000178f9f42cca899ce173e12a026fca/cattouch">
-                </div>
-                <div class="CatalogModelMosaicCard__description-q3sbX">
-                    <span class="CatalogModelMosaicCard__text-RT9F1">Vesta</span>
-                    <span class="CatalogModelMosaicCard__separator-gXbCq"></span>
-                    <span class="CatalogModelMosaicCard__count-ympOu">1614</span>
-                </div>
-            </a>
-            <!-- other entries -->
+        <div class="grid-container">
+            <div class="model-card">
+                <a href="https://auto.ru/catalog/cars/vaz/granta/" target="_blank">
+                    <img src="//avatars.mds.yandex.net/get-verba/1030388/2a000001609d713fe4380ce1d36fac8ab0eb/cattouch" alt="Granta">
+                    <p>Granta</p>
+                </a>
+            </div>
+            <div class="model-card">
+                <a href="https://auto.ru/catalog/cars/vaz/vesta/" target="_blank">
+                    <img src="//avatars.mds.yandex.net/get-verba/3587101/2a00000178f9f42cca899ce173e12a026fca/cattouch" alt="Vesta">
+                    <p>Vesta</p>
+                </a>
+            </div>
+            <!-- Add more model cards as needed -->
         </div>
-    </div>
-</p>
- <p>
     </section>
     <section id="timeline">
         <h2>История LADA</h2>
         <p>В 1970 году с конвейера ВАЗа сошли первые шесть автомобилей ВАЗ-2101 «Жигули», которые стали первой «копейкой» в модельном ряду.
             В 1980-х годах завод переживал период активного развития, и в 1990-х годах он стал одним из крупнейших производителей автомобилей в России.
-В 1998 году завод пережил кризис, который был вызван масштабными проблемами сбыта и финансовыми трудностями.
-            В это время АвтоВАЗ был на грани банкротства, и многие сотрудники были вынуждены уволиться. Однако, в 2000-х годах завод начал восстанавливаться
-            , и в 2003 году с конвейера сошли первые шесть автомобилей ВАЗ-21103-Т, которые стали десятым семейством в моделировании.
-В 2010-х годах АвтоВАЗ продолжил свой путь к восстановлению, и в 2019 году он отметил 50-летие с момента основания.
+            В 1998 году завод пережил кризис, который был вызван масштабными проблемами сбыта и финансовыми трудностями.
+            В это время АвтоВАЗ был на грани банкротства, и многие сотрудники были вынуждены уволиться. Однако, в 2000-х годах завод начал восстанавливаться,
+            и в 2003 году с конвейера сошли первые шесть автомобилей ВАЗ-21103-Т, которые стали десятым семейством в моделировании.
+            В 2010-х годах АвтоВАЗ продолжил свой путь к восстановлению, и в 2019 году он отметил 50-летие с момента основания.
             В это время завод начал развивать новые модели, такие как Lada Vesta NG, и модернизировать свои производственные процессы для улучшения эффективности и уменьшения себестоимости.
-В 2022 году АвтоВАЗ пережил новый этап в своей истории, когда он был преобразован в чисто российское предприятие с большой долей государственного участия.
-            В это время завод начал развивать новые модели, такие как Lada Niva, и модернизировать свои производственные процессы для улучшения эффективности и уменьшения себестоимости.
-В целом, история АвтоВАЗа является историей преодоления трудностей и достижения успеха через международное партнерство, объединение людей и инновационное развитие.</p>
-    </section>
-    <section id="contact">
-        <h2>Подготовили 3 Никиты и 1 Димасик ЭУ-133605</h2>
-        <p>3 Никиты и 1 Димасик </p>
+            В 2022 году АвтоВАЗ пережил новый этап в своей истории, когда он был преобразован в чисто российское предприятие с большой долей государ</p>
     </section>
     <footer>
-        <p>&copy; 2024 История LADA</p>
+        <p>Подготовили 3 Никиты и 1 Димасик ЭУ-133605</p>
     </footer>
 </body>
 </html>
