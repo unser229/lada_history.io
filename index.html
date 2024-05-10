@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,26 @@
             color: #343a40; /* темно-серый цвет */
         }
         header {
-            background-color: #343a40; /* темно-серый цвет */
+            background: linear-gradient(135deg, #0056b3, #6c757d); /* синий и серый цвета */
+            background-size: 200% 200%; /* Увеличиваем размер градиента */
             color: #fff;
             padding: 20px;
             text-align: center;
+            animation: gradientBackground 10s infinite;
         }
+
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         nav {
             background-color: #495057; /* серый цвет */
             padding: 10px;
